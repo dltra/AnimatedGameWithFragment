@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Animated Game with Fragment</string>
+    <string name="reverse_vertical">Reverse Y</string>
+</resources>
