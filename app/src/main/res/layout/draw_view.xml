@@ -13,11 +13,51 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/drawView"/>
-    <Button
+    <RatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reverse_vertical"
-        android:id="@+id/reverse_y"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/ratingBar" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/left"
+        android:id="@+id/leftButton"
+        app:layout_constraintRight_toLeftOf="@+id/rightButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="#098219"
+        android:onClick="moveLeft"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/leftButton"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/rightButton"
+        android:background="#098219"
+        android:onClick="moveRight"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/leftButton"
+            app:layout_constraintRight_toRightOf="@id/leftButton"
+            android:onClick="redCheckBoxClicked"
+            android:id="@+id/redCheckBox"
+            android:background="@color/purple_500"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/rightButton"
+            app:layout_constraintLeft_toLeftOf="@id/rightButton"
+            android:onClick="greenCheckBoxClicked"
+            android:id="@+id/greenCheckBox"
+            android:background="@color/teal_200"/>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
